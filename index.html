@@ -15,7 +15,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="canonical" href="https://tech.maxnova.co.uk" />
 
-  <link rel="stylesheet" href="css/style.css?v=4" />
+  <link rel="stylesheet" href="css/style.css?v=5" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 </head>
@@ -433,15 +433,76 @@
 </section>
 
 <!-- ══ CTA STRIP ══════════════════════════════════════════════ -->
-<section class="cta-strip" id="contact">
+<!-- ══ CONTACT ════════════════════════════════════════════════ -->
+<section class="contact-section" id="contact">
   <div class="container">
-    <div class="cta-strip-inner">
-      <h2 class="comic reveal">Ready to sort your IT?</h2>
-      <p class="reveal d1">Get in touch today for a free, no-obligation discovery call. We'll assess your current setup and tell you exactly how we can help.</p>
-      <div class="cta-strip-btns reveal d2">
-        <a href="mailto:maxd@ittechs.io" class="btn btn-white">maxd@ittechs.io</a>
-        <a href="https://maxnova.co.uk" target="_blank" rel="noopener" class="btn btn-outline">MaxNova Group ↗</a>
+    <div class="contact-grid">
+
+      <div class="contact-left reveal">
+        <span class="section-kicker">Get In Touch</span>
+        <h2 class="comic contact-title">Ready to Sort<br><span class="grad-text">Your IT?</span></h2>
+        <p class="contact-sub">Get in touch today for a free, no-obligation discovery call. We'll assess your current setup and tell you exactly how we can help.</p>
+        <div class="contact-details">
+          <div class="contact-detail-row">
+            <span class="contact-detail-icon">✉</span>
+            <div>
+              <span class="contact-detail-label">Email</span>
+              <a href="mailto:maxd@ittechs.io" class="contact-detail-value">maxd@ittechs.io</a>
+            </div>
+          </div>
+          <div class="contact-detail-row">
+            <span class="contact-detail-icon">📍</span>
+            <div>
+              <span class="contact-detail-label">Based</span>
+              <span class="contact-detail-value">Kirkcaldy, Scotland · UK-Wide</span>
+            </div>
+          </div>
+          <div class="contact-detail-row">
+            <span class="contact-detail-icon" style="color:var(--pink);">●</span>
+            <div>
+              <span class="contact-detail-label">Status</span>
+              <span class="contact-detail-value" style="color:var(--pink);font-weight:700;">Taking on new clients</span>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <div class="contact-right reveal d2">
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/mrewknzv" method="POST" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name" class="form-label">Your Name <span class="req">*</span></label>
+              <input type="text" id="name" name="name" class="form-input" placeholder="Jane Smith" required />
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">Email Address <span class="req">*</span></label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="jane@business.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="service" class="form-label">What do you need? <span class="req">*</span></label>
+            <select id="service" name="service" class="form-input form-select" required>
+              <option value="" disabled selected>Select a service…</option>
+              <option value="managed-it">Managed IT Services</option>
+              <option value="helpdesk">Helpdesk Support</option>
+              <option value="cybersecurity">Cybersecurity</option>
+              <option value="cloud">Cloud Solutions</option>
+              <option value="networking">Networking</option>
+              <option value="cctv">CCTV &amp; Physical Security</option>
+              <option value="other">Something Else</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message" class="form-label">Tell us about your situation <span class="req">*</span></label>
+            <textarea id="message" name="message" class="form-input form-textarea" placeholder="How many staff, current setup, biggest IT headaches…" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit">Send Message →</button>
+          <div class="form-success" id="formSuccess" aria-live="polite" style="display:none;">
+            ✦ Message sent! We'll be in touch shortly.
+          </div>
+        </form>
+      </div>
+
     </div>
   </div>
 </section>
@@ -506,6 +567,7 @@
 <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 
 <script src="js/main.js"></script>
+<script src="js/contact.js"></script>
 <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
 </body>
 </html>
