@@ -282,7 +282,6 @@ ul { list-style: none; }
   transition: transform 0.2s, box-shadow 0.2s;
 }
 .hero-feature-card:hover { transform: translateX(6px); box-shadow: var(--shadow-md); }
-.hero-feature-card:nth-child(even) { margin-left: 24px; }
 
 .hfc-icon {
   width: 44px; height: 44px;
