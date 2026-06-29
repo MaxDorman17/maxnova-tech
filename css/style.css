@@ -13,7 +13,7 @@
   --grad-h:  linear-gradient(135deg, #a855f7, #f472b6);
   --yellow:  #fde047;
   --ink:     #0a0612;
-  --nav-h:   72px;
+  --nav-h:   100px;
 
   /* Light theme */
   --bg:         #f8f7fc;
@@ -130,9 +130,18 @@ ul { list-style: none; }
   top: 0; left: 0; right: 0;
   height: var(--nav-h);
   z-index: 100;
+  background: rgba(248,247,252,0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(147,51,234,0.08);
   transition: background 0.3s, box-shadow 0.3s;
 }
-.nav.scrolled { background: var(--surface); box-shadow: var(--shadow); }
+.nav.scrolled {
+  background: rgba(248,247,252,0.85);
+  box-shadow: 0 4px 24px rgba(10,6,18,0.08);
+}
+[data-theme="dark"] .nav { background: rgba(10,6,18,0.6); border-bottom-color: rgba(147,51,234,0.15); }
+[data-theme="dark"] .nav.scrolled { background: rgba(10,6,18,0.85); }
 .nav-inner {
   max-width: 1160px;
   margin-inline: auto;
